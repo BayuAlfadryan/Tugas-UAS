@@ -1,0 +1,677 @@
+%% bare_conf.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+\documentclass[conference]{IEEEtran}
+% Some Computer Society conferences also require the compsoc mode option,
+% but others use the standard conference format.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/pkg/ifpdf
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+%\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of the IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 5.0 (2009-03-20) and later if using hyperref.sty.
+% The latest version can be obtained at:
+% http://www.ctan.org/pkg/cite
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at: 
+% http://www.ctan.org/pkg/graphicx
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/pkg/epslatex
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics.
+%
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/pkg/algorithms
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/pkg/algorithmicx
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{caption}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/array
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a larger sans serif font
+% than the serif footnote size font used in traditional IEEE formatting
+% and thus the need to invoke different subfig.sty package options depending
+% on whether compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/pkg/subfig
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure.
+% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
+% corrections already built into the system in which case a warning will
+% be issued if an attempt is made to load fixltx2e.sty as it is no longer
+% needed.
+% The latest version and documentation can be found at:
+% http://www.ctan.org/pkg/fixltx2e
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/stfloats
+% Do not use the stfloats baselinefloat ability as the IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that the IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/pkg/dblfloatfix
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/url
+% Basically, \url{my_url_here}.
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\usepackage{graphicx}
+\begin{document}
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
+\title{Autonomous obstacle avoidance using fuzzy logic}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\IEEEauthorblockN{Jelle van Dijk}
+\IEEEauthorblockA{
+University of Amsterdam\\
+Student ID: 10989048
+}
+\and
+\IEEEauthorblockN{Gawan Dekker}
+\IEEEauthorblockA{
+University of Amsterdam\\
+Student ID: 11025654
+}
+\and 
+\IEEEauthorblockN{Victor Gladys}
+\IEEEauthorblockA{
+University of Amsterdam\\
+Student ID: 10523626
+}
+}
+
+\date{}
+
+
+% make the title area
+\maketitle
+
+
+
+
+\begin{abstract}
+  Self driving cars can no longer be avoided, every major company in the world is working on them. But how can fuzzy logic be used in this new branch of engineering.A simulation of an autonomous robot was created, the movements of the robot where guided by a fuzzy logic system. The goal was to create a fuzzy logic system that would guide the robot through the obstacles placed in the simulation without colliding with them. We succeeded in create such a fuzzy logic system, to some degree. The robot avoided tried to avoid obstacles but was not always successful. There is a lot fuzzy logic can do in the branch of autonomous vehicles.
+\end{abstract}
+\section{Introduction}
+Self driving cars are being developed at almost every major car and tech company in the world right now. Although they are still relatively early in development, they are considered by many to be the future of personal transportation. A lot of research has been done on using fuzzy logic in self driving cars and other autonomous moving vehicles. The different application for fuzzy logic in autonomous vehicles range from Cabrera-Cosetl, 2009 \cite{Cabrera2009} where fuzzy logic was used allow a vehicle to park itself, to Gerdelan et al. 2006 \cite{gerdelan2006novel} where a combination of A* and fuzzy logic was used to create a path finding robot with obstacle avoidance.
+
+This paper will be about the obstacle avoidance aspect of fuzzy logic in autonomous vehicles. The goal is to better understand how fuzzy logic can be used for obstacle avoidance. To try and gain a better understanding of autonomous moving vehicles, in this project an attempt will be made to recreate a simple one using a fuzzy logic system (FLS).
+
+\section{Literature Review}
+There is already a lot of literature about trying to make a robot traverse an environment using fuzzy logic. In this section, we will briefly discuss three papers that are relevant to our problem.
+
+%\subsection{Artificial Neural Fuzzy Logic Algorithm for Robot Path Finding (X. Bajrami; A. D\"ermaku; N. Demaku)}
+In \cite{bajrami2015artificial}, X. Bajrami et al. create and compare two fuzzy logic implementations to guide a robot through a simulated environment with obstacles.
+
+The first implementation uses a combination of FLSs with mamdani-type inferrence and handmade rulebases and membership functions to guide the robot. The input (distances to closest objects and goal, angle towards goal and preferred turn) is used to determine acceleration levels for the left and right wheels of the robot for different objectives (like obstacle avoidance) and to determine different weights for those objectives.
+
+The second implementation used an FLS with a Sugeno-type inference system, where the membership functions were trained using a neuro-adaptive learning method.
+
+After running tests in a simulated environment, the two implementations were compared.
+
+Bajrami et al. \cite{bajrami2015artificial} describes a FLS system but does not explain the design choices or in some cases do net specify the settings used in there FLS. There systems cannot be recreated for due to a lack of information. In this paper the results are also not given clearly given, they describe one of there test setups but do not specify the others.
+
+%\subsection{A Novel Hybrid Fuzzy A* Robot Navigation System for Target Pursuit and Obstacle Avoidance (A. P. Gerdelan; Dr. N. H. Reyes, Ph.D.)}
+In \cite{gerdelan2006novel}, Gerdelan et al. created a hybrid system to control a robot. The first layer of the system consisted of an A* algorithm. The A* algorithm is a path finding algorithm and is considered to be very fast. The A* path finding layer calculated the optimal route from the position of the robot to the end point. When traversing this route, the robot followeda set of way points. The second layer of the system is a fuzzy logic system. This system had as input information about the next way point as well as about the nearest obstacle. With these pieces of information a speed and turning speed for the robot were chosen.
+
+This paper used some techniques that can be very useful for our project. Since they used a moving end point in their simulations, their test scenarios where harder. However, the same principles they used to control their robot will apply to the robot in the simulations used in our project.
+
+One problem that the researchers in \cite{gerdelan2006novel} encountered, was that in some situation the fuzzy logic system would try to avoid an obstacle and by doing so, would not be able to move to the next way point. This is something to keep in mind for our project, but could be fixed by tweaking the membership functions.
+
+%\subsection{Adaptive two layer fuzzy control of a mobile robot system (M. Mohammadian; R. J. Stonier)}
+In \cite{mohammadian1995adaptive}, M. Mohammadian and R. J. Stonier used a genetic algorithm to adapt fuzzy rules in a two layer fuzzy logic system, which is then used by two robots to navigate towards a target without colliding.
+The genetic learning has been applied to generate a new layer of fuzzy rules that can be integrated into an already existing rulebase.
+
+The first of the two fuzzy layers is used to determine the angle at which to continue moving, whilst the second layer determines the speed of the robot. By encoding the rulebase into a bitstring, Mohammadian \textit{et al.}\cite{mohammadian1995adaptive} were able to modify the rulebases with a genetic algorithm using cross-over and single-point mutations over a number of generations. To do this they used a modified cross-over procedure that ensured that these bitstrings were cut only at points that defined boundaries between rules.
+
+The paper concludes in noting that, although most of their tests resulted in a positive outcome, some had trouble at the corners of the tested driving areas. This suggests that genetic algorithms find a maximum in optimizing fuzzy systems that is not necessarily easily applicable to a change in, or extension of, the initial learning environment.
+
+\section{Proposed Approach}
+% If you do not have data to learn from you may skip this section. In the design, you can emphasize that the system is based on expert knowledge.
+%\subsection{Data}
+%Most of the data will be personal knowledge. The first versions of membership functions and rules will be created by us. When possible the newer versions of the membership functions and rules will be extrapolated from the test result of the previous evolution of the system.
+\subsection{Design}
+%The general design of our system is still unknown at this point. As inputs we will use the distances to the nearest objects at several degrees of rotation and the distance and angle to the target location. As outputs, we will use accelleration and degree of rotation of the robot. However, these might all still be subject to change.
+The fuzzy logic system used to control the robot has three inputs and two outputs. The inputs that are used correspond the distances in pixels to the nearest object in three different directions: front, front-left and front-right. Both the output variables are an angle, the angle represent how much the FLS wants to move left and right. The direction the robot will move in is the average angle between the two output values.
+
+The FLS has a complete rule base, consisting of 27 rules. The rules are chosen such that the robot moves left or right if the distance to the other side becomes to small. The rules favor a left turn over a right one, meaning that if the distance to the left and to the right are equal the system moves left. 
+
+The three input variables all have the same membership functions. Consisting of the following meberships functions\\
+low = trapezoid: [-1 -1 5 25]\\
+medium = triangle: [5 25 70]\\
+high = trapezoid: [25 70 1000 1000]\\
+The input variables right most membership function goes to a 1000 because that is more then the maximum distance which can be measured in the created simulation.
+
+The two output variables also have the same membership functions:\\
+low = trapmf: [0 0 0.09817477 0.19634954]\\
+medium = trimf: [0.09817477 0.19634954 0.29452431]\\
+high = trapmf: [0.19634954 0.29452431 0.4 0.4]\\
+The values of the output membership functions are angles in radials.
+
+
+\subsection{Implementation}
+%The two most important parts, the simulation and the Fuzzy Logic System, will be created by us in python (exact algorithms are not yet known).
+The project implementations can be divided in to two parts, the Fuzzy Logic System and the simulation\footnote{The code for both can be found here: \url{https://github.com/Yelvd/Fuzzy_logic_final_project}}. Both parts are coded in python\footnote{Python 3.5.2 from \url{www.python.org}}, the following library's where used, numpy\footnote{Numpy 1.11.0 from \url{http://www.numpy.org/}} for mathematical calculations and pygame\footnote{Pygame 1.9.3 from \url{www.pygame.org/}} for visualizing the simulated environment.
+
+\subsubsection*{Fuzzy Logic System implementation}
+
+The FLS implementation is an extension from the lab1 python exercise as found on blackboard. The FLS implementation contains a Reasoner class which given the input variables, output variables and rule base for the FLS can calculate the crisp value of the outputs given the input data points.
+
+The following options are available to use in the FLS implementation used in this paper.
+
+\textbf{Membership functions:}
+\begin{itemize}
+  \item Trapezoid
+  \item Triangular
+  \item Gaussian
+  \item Bell shaped
+  \item Sigmoidal curve
+\end{itemize}
+
+\textbf{Aggregation methods:}
+\begin{itemize}
+  \item sum
+  \item max
+\end{itemize}
+
+\textbf{Defuzzification methods}
+\begin{itemize}
+  \item Smallest of max(SOM)
+  \item Largest of max(LOM)
+  \item Mean of max(MOM)
+  \item Centroid
+\end{itemize}
+
+\textbf{And/Or methods for rules}
+\begin{itemize}
+  \item Min (AND)
+  \item Prod (AND)
+  \item Max (OR)
+  \item probor (OR)
+\end{itemize}
+
+\hfill\\
+\subsubsection*{Simulated Environment}
+The simulation environment consists of a checkerboard field. In this field a variable number of square obstacles and `players' can be placed. The player movements can be controlled by either using the keyboard or giving it a FLS system to the player. If a FLS is given to a player it cannot be controlled manually.
+All placed obstacles have the ability to make random movements around the field, when this option is turned on the obstacle chooses a random direction and moves in that direction for a given number of frames before picking a new random direction.
+
+When a moving object, either a player or an obstacle, tries to make a move which would result in two objects intersecting, this move is not allowed and the object will not move that frame. If this object is an obstacle the obstacle will rotate its moving direction 45 degrees clockwise.
+
+When the player object, from now on referred to as robot, has an FLS assigned to it, then every frame the inputs for the FLS are calculated and given to the Reasoner. The crisp values returned by the FLS are then used to set the direction the robot will move in for that frame. In this paper three inputs are used for the movement of the robot. All inputs correspond to the distance in pixels from the edge of the robot to the next obstacle, which can either be a placed obstacle or the wall. Each input is the distance at a different angle ranging from [-85, 85]. These angles are based on the rotation of the robot, the front-left input uses the [25, 45, 65, 85] degree angles to determine the distance to the closest obstacle, the front-right uses the angles [-60, -45, -25, -85] and the front inputs uses [-15, -5, 5, 15]. From the multiple distance the lowest is given to the FLS as input, the minimum value for multiple angles is used to give the robot a `broader' range of vision. The robot has a speed, which is set in the beginning of the simulation, it will constantly move at this speed unless it is colliding with something. The FLS can only choose the direction of the robot.
+
+\section{Experiments and Results}
+Two starting situation were created for the simulation. These starting situations consisted of the robot in the corner at the bottom left and square obstacles of varying sizes placed around the field, see Figure~\ref{fig:start1} and Figure~\ref{fig:start2}.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.3]{./figs/StartSetup.png}
+  \caption{starting situation 1 for the simulation}
+  \label{fig:start1}
+  \includegraphics[scale=0.3]{./figs/StartSetup2.png}
+  \caption{starting situation 2 for the simulation}
+  \label{fig:start2}
+\end{figure}
+
+The experiment counts the number of collisions the robot makes with the obstacles and the walls. The simulation stops when 5000 ticks have been completed or when the robot gets stuck somewhere. Ticks were used as a time measurement unit to improve accuracy when the experiment is run on different systems. To collect data on the FLS multiple experiments multiple settings could be changed for each experiment. The settings that could be changed and their possible values were:
+\begin{itemize}
+  \item Starting situation: s1 or s2, as seen in Figure~\ref{fig:start1} and Figure~\ref{fig:start2}
+  \item Aggregeation method: max or sum
+  \item Defuzzification method: lom, som, mom or centroid
+  \item Robot moving speed: 5 pixels/tick or 10 pixels/tick
+\end{itemize}
+
+All setting combinations are tested, because the simulation and the FLS are discrete each combination only needs one run.
+
+
+\subsection{Results}
+
+\begin{center}
+\begin{tabular}{ | m{2.8em} | m{3em} | m{2.8em} | m{5em} | m{5.2em} | }
+\hline
+\multicolumn{2}{|c|}{} & \textit{N ticks} & \textit{N collisions} & $\frac{N collisions + 1}{N ticks + 1}$ \\
+\hline
+\multirow{4}{*}{\textbf{\shortstack{De-\\fuzzifi-\\cation}}} & \textit{som} & 286 & 3 & 0.01394 \\
+ & \textit{mom} & 411 & 3 & 0.00971 \\
+ & \textit{lom} & 1023 & 2 & 0.00293 \\
+ & \textit{centroid} & 61 & 1 & 0.03226 \\
+\hline
+\end{tabular}
+\captionof{table}{player-speed=5; environment=1; aggregation=max}
+\label{table:ps5e1amax}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ | m{2.8em} | m{3em} | m{2.8em} | m{5em} | m{5.2em} | }
+\hline
+\multicolumn{2}{|c|}{} & \textit{N ticks} & \textit{N collisions} & $\frac{N collisions + 1}{N ticks + 1}$ \\
+\hline
+\multirow{4}{*}{\textbf{\shortstack{De-\\fuzzifi-\\cation}}} & \textit{som} & 69 & 1 & 0.02857 \\
+ & \textit{mom} & 449 & 1 & 0.00444 \\
+ & \textit{lom} & 62 & 1 & 0.03175 \\
+ & \textit{centroid} & 61 & 1 & 0.03226 \\
+\hline
+\end{tabular}
+\captionof{table}{player-speed=5; environment=1; aggregation=sum}
+\label{table:ps5e1asum}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{ | m{2.8em} | m{3em} | m{2.8em} | m{5em} | m{5.2em} | }
+\hline
+\multicolumn{2}{|c|}{} & \textit{N ticks} & \textit{N collisions} & $\frac{N collisions + 1}{N ticks + 1}$ \\
+\hline
+\multirow{4}{*}{\textbf{\shortstack{De-\\fuzzifi-\\cation}}} & \textit{som} & 263 & 1 & 0.00758 \\
+ & \textit{mom} & 863 & 1 & 0.00231 \\
+ & \textit{lom} & 292 & 1 & 0.00682 \\
+ & \textit{centroid} & 156 & 1 & 0.01274 \\
+\hline
+\end{tabular}
+\captionof{table}{player-speed=5; environment=2; aggregation=max}
+\label{table:ps5e2amax}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ | m{2.8em} | m{3em} | m{2.8em} | m{5em} | m{5.2em} | }
+\hline
+\multicolumn{2}{|c|}{} & \textit{N ticks} & \textit{N collisions} & $\frac{N collisions + 1}{N ticks + 1}$ \\
+\hline
+\multirow{4}{*}{\textbf{\shortstack{De-\\fuzzifi-\\cation}}} & \textit{som} & 549 & 3 & 0.00727 \\
+ & \textit{mom} & 1804 & 7 & 0.00443 \\
+ & \textit{lom} & 68 & 1 & 0.02899 \\
+ & \textit{centroid} & 5000 & 16 & 0.00340 \\
+\hline
+\end{tabular}
+\captionof{table}{player-speed=5; environment=2; aggregation=sum}
+\label{table:ps5e2asum}
+\end{center}
+
+
+
+
+
+\begin{center}
+\begin{tabular}{ | m{2.8em} | m{3em} | m{2.8em} | m{5em} | m{5.2em} | }
+\hline
+\multicolumn{2}{|c|}{} & \textit{N ticks} & \textit{N collisions} & $\frac{N collisions + 1}{N ticks + 1}$ \\
+\hline
+\multirow{4}{*}{\textbf{\shortstack{De-\\fuzzifi-\\cation}}} & \textit{som} & 14 & 1 & 0.13333 \\
+ & \textit{mom} & 14 & 1 & 0.13333 \\
+ & \textit{lom} & 14 & 1 & 0.13333 \\
+ & \textit{centroid} & 32 & 1 & 0.06061 \\
+\hline
+\end{tabular}
+\captionof{table}{player-speed=10; environment=1; aggregation=max}
+\label{table:ps10e1amax}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ | m{2.8em} | m{3em} | m{2.8em} | m{5em} | m{5.2em} | }
+\hline
+\multicolumn{2}{|c|}{} & \textit{N ticks} & \textit{N collisions} & $\frac{N collisions + 1}{N ticks + 1}$ \\
+\hline
+\multirow{4}{*}{\textbf{\shortstack{De-\\fuzzifi-\\cation}}} & \textit{som} & 33 & 1 & 0.05882 \\
+ & \textit{mom} & 32 & 1 & 0.06061 \\
+ & \textit{lom} & 15 & 1 & 0.12500 \\
+ & \textit{centroid} & 32 & 1 & 0.06061 \\
+\hline
+\end{tabular}
+\captionof{table}{player-speed=10; environment=1; aggregation=sum}
+\label{table:ps10e1asum}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{ | m{2.8em} | m{3em} | m{2.8em} | m{5em} | m{5.2em} | }
+\hline
+\multicolumn{2}{|c|}{} & \textit{N ticks} & \textit{N collisions} & $\frac{N collisions + 1}{N ticks + 1}$ \\
+\hline
+\multirow{4}{*}{\textbf{\shortstack{De-\\fuzzifi-\\cation}}} & \textit{som} & 72 & 1 & 0.02740 \\
+ & \textit{mom} & 117 & 3 & 0.03390 \\
+ & \textit{lom} & 70 & 1 & 0.02817 \\
+ & \textit{centroid} & 24 & 1 & 0.08000 \\
+\hline
+\end{tabular}
+\captionof{table}{player-speed=10; environment=2; aggregation=max}
+\label{table:ps10e2amax}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ | m{2.8em} | m{3em} | m{2.8em} | m{5em} | m{5.2em} | }
+\hline
+\multicolumn{2}{|c|}{} & \textit{N ticks} & \textit{N collisions} & $\frac{N collisions + 1}{N ticks + 1}$ \\
+\hline
+\multirow{4}{*}{\textbf{\shortstack{De-\\fuzzifi-\\cation}}} & \textit{som} & 72 & 1 & 0.02740 \\
+ & \textit{mom} & 24 & 1 & 0.08000 \\
+ & \textit{lom} & 35 & 1 & 0.05556 \\
+ & \textit{centroid} & 24 & 1 & 0.08000 \\
+\hline
+\end{tabular}
+\captionof{table}{player-speed=10; environment=2; aggregation=sum}
+\label{table:ps10e2asum}
+\end{center}
+
+
+\section{Discussion}
+Judging from our results, there were two visible problems with our FLS.
+
+The first being that the robot seems to get stuck very easily. All results in the tables shown in the results section, except for one result in table \ref{table:ps5e2asum} have the simulation shut down before the maximum number of ticks (5000) has passed. Moreover, all results, except for two show that the robot got stuck before 1000 ticks passed.
+
+Furthermore, the tables show that the robot gets stuck at a small amount of collisions. Most of the time the first collision the robot has with an object makes it get stuck. This is yet another sign that the robot gets stuck on collisions easily.
+
+This behavior could probably be explained by a combination of an insufficient amount of information that is provided to the robot and FLS-rules that are sub optimal. The rules might make the robot ill-equipped to recover from a collision (currently the robot turns left as much as possible when encountering very nearby objects). However, the information provided to the robot might be the biggest problem. The robot currently only sees objects within a 170 degree window in front of it. As soon as an object leaves that window, the robot will act as if it does not exists. This could cause it to get stuck on corners of an object, or make it repeatedly rotate back and forth between seeing the object and not seeing the object (for example when another object is also close at its other side).
+
+A third possibility is that we are dealing with an implementation issue. Mainly that the robot takes its rotation into account when calculating its distance from other objects. However, when checking for a collision, we only use squares parallel to the grid axis, since pygame only supports collision-checking in that way. This could cause inconsistencies between the robots perceptions and the simulated reality.
+
+The final way this could be explained is that there are to many places in the simulation where the robot is not able to move through. Because the FLS has no way of telling the robot to move backwards it could get stuck due to limitations in the possible maneuvers of the robot.\\
+
+The second problem with our FLS that we can extrapolate from our results is that, when the speed of the robot increases, the duration of the simulations decreases (the robot gets stuck very early on) (shown in tables \ref{table:ps10e1amax} to \ref{table:ps10e2asum}). This can be explained by the fact that the mfs use a distance in pixels to calculate the closeness of objects. The membership functions don't change based on the speed. The FLS also does not have speed as one of its inputs. This means that the FLS has no way to correct for speed. When the robot moves at a higher speed the something that was `far' for a lower speed might now be reached in one frame. In data that was not added to this paper it can be seen that when the robot moves at a very slow speed, 1 or 2 pixels per tick, it is far more successful in avoiding the obstacles.\\
+
+It is interesting to note that the centroid method for defuzzification preforms worst in almost every setup. The mom method seems to be the best performer overall. No explanation can be given for this, but more research could be about this.
+
+\section{Conclusions and Future Work}
+Although the FLS we created is limited in it's methods to avoid obstacles, it shows that there are possibility's for a fuzzy logic system to help in this area. Most of the ways that where concluded to be reasons of failure where design choices that limited the outcome. An example of this is the limited directions the robot could move is, it was not allowed to move backwards. But when looking at the movement from in the simulation it can be clearly seen that the robot has a basic idea of what to do to avoid the obstacles.
+
+For future work the major issues that need to be addressed the fact that the FLS does not use the speed of the robot and the limited directions the robot can move in. After this the next step would be to put the robot in an environment with moving obstacles, when doing this most of the input variable need to be altered to allow backwards vision. When a FLS is created that is successful in avoiding moving obstacles it should be compared to other approaches to see if there are benefits to using a FLS over a different method.
+
+\nocite{*}
+\bibliographystyle{IEEEtranS}
+\bibliography{mybibfile}
+
+
+
+
+
+%\section{Appendices}
+
+
+\section{Workload Distribution}
+\subsection*{Jelle van Dijk: 10989048}
+The goal was that every person in the team helped on each part of the project and more importantly understood every part of the project. Although I did not work evenly on all parts I did contribute every where and am pretty confidant that I know how every part of the project works. Most of my work can be found in the simulation and the .fis file parser, which was not discussed in the paper. The .fis file parser I made to have a way to store our FLS, it is a Python script that can read and parse a .fis file, the same files that are generated by Matlab's fuzzy logic toolbox, and create an instance of our FLS with that. Most of my work can be found in the simulation, I created the foundation where the others worked on.
+
+
+I learned a lot from this project, allot of the theory that was given to us in the classes was turned into something that work during this project. Most of all I am happy that we got a working system, although it is not perfect it is a good attempt.
+
+
+\subsection*{Gawan Dekker: 11025654}
+Most of the work I have done has gone in to the Fuzzy Logic System implementation and the simulation.
+
+For the FLS-implementation, I wrote the parts up untill the implementation of the rulebases and I created the early version of the implication/aggregation/defuzzification (then only capable of the basic functionality from the python assignments, with support for multiple outputs added), on to which others later expanded.
+
+For the simulation, I created the raycast function \textit{player.get\_distance()} and created one of the different FLSs we made during the project, the one on to which we expanded to get to the finalized FLS, spoken of in the report. I also helped coupling that FLS to the simulation.
+
+On the report I wrote one third of the literature review, worked on the basis of the implementation and design, created the tables in the results and added to the discussion. I also made small adjustments at different places in the report.
+
+
+\subsection*{Victor Gladys: 10523626}
+(Victor could not be present during the last hours before the deadline and, as a result, was not able to write about his contributions.)
+
+% that's all folks
+\end{document}
